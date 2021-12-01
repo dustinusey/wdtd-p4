@@ -1,3 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+ul {
+  margin: 0;
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  background: #94d2d2;
+  transition: background 1s;
+}
+body.ocean {
+  background: #94d2d2;
+}
+body.ocean .card .quote-container .quote-mark {
+  color: #94d2d2;
+}
+body.nord {
+  background: #bad294;
+}
+body.nord .card .quote-container .quote-mark {
+  color: #bad294;
+}
+body.bubblegum {
+  background: #f1b0a5;
+}
+body.bubblegum .card .quote-container .quote-mark {
+  color: #f1b0a5;
+}
+body.forest {
+  background: #94d29e;
+}
+body.forest .card .quote-container .quote-mark {
+  color: #94d29e;
+}
+body.purplehaze {
+  background: #c9afd3;
+}
+body.purplehaze .card .quote-container .quote-mark {
+  color: #c9afd3;
+}
+body.sunlight {
+  background: #e7cb8f;
+}
+body.sunlight .card .quote-container .quote-mark {
+  color: #e7cb8f;
+}
+
+header {
+  text-align: center;
+  padding: 1rem;
+}
+header h1 {
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #404b50;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem;
+  height: 100%;
+  min-height: 30vh;
+  max-width: 650px;
+  margin: 0 auto;
+}
+main .card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  max-width: 650px;
+  width: 100%;
+  padding: 2rem;
+  padding-bottom: 0.5rem;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  margin-top: auto;
+  animation: fadeInUp 1s ease forwards;
+}
+main .card .quote-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+main .card .quote-container .quote-mark {
+  transition: color 1s;
+  font-size: 3rem;
+}
+main .card .quote-container .quote {
+  margin: 0 1rem;
+  color: #535353;
+  font-size: 1.5rem;
+}
+main .card .quote-info {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+}
+main .card .quote-info ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+main .card .quote-info ul li {
+  margin-right: 0.33rem;
+}
+main .card .quote-info ul li:last-child {
+  margin-right: 0;
+}
+main .card .quote-info ul li.source {
+  font-weight: 600;
+}
+main .card .tags {
+  margin-top: 3rem;
+}
+main .card .tags ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+main .card .tags ul li {
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  background: #f1f1f1;
+  margin-right: 0.25rem;
+  font-size: 0.7rem;
+}
+main .card .tags ul li:first-child {
+  background: transparent;
+  font-size: 0.9rem;
+}
+main button {
+  outline: none;
+  font-size: 0.9rem;
+  margin-left: auto;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  border: none;
+  background: white;
+  margin-top: 1rem;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  transition: 0.2s;
+  cursor: pointer;
+}
+main button:active {
+  box-shadow: none;
+  background: rgba(255, 255, 255, 0.75);
+}
 
 /*# sourceMappingURL=styles.css.map */

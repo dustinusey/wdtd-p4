@@ -1,0 +1,151 @@
+@import "utilities/index";
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  background: #94d2d2;
+  transition: background 1s;
+  &.ocean {
+    background: #94d2d2;
+    .card .quote-container .quote-mark {
+      color: #94d2d2;
+    }
+  }
+  &.nord {
+    background: #bad294;
+    .card .quote-container .quote-mark {
+      color: #bad294;
+    }
+  }
+  &.bubblegum {
+    background: #f1b0a5;
+    .card .quote-container .quote-mark {
+      color: #f1b0a5;
+    }
+  }
+  &.forest {
+    background: #94d29e;
+    .card .quote-container .quote-mark {
+      color: #94d29e;
+    }
+  }
+  &.purplehaze {
+    background: #c9afd3;
+    .card .quote-container .quote-mark {
+      color: #c9afd3;
+    }
+  }
+  &.sunlight {
+    background: #e7cb8f;
+    .card .quote-container .quote-mark {
+      color: #e7cb8f;
+    }
+  }
+}
+
+header {
+  text-align: center;
+  padding: 1rem;
+  h1 {
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: rgb(64, 75, 80);
+  }
+}
+
+main {
+  @include flex(column, nowrap, flex-start, center);
+  padding: 1rem;
+  height: 100%;
+  min-height: 30vh;
+  max-width: 650px;
+  margin: 0 auto;
+  .card {
+    @include flex(column, nowrap, flex-start, stretch);
+    max-width: 650px;
+    // min-width: 650px;
+    width: 100%;
+    padding: 2rem;
+    padding-bottom: 0.5rem;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 4px 4px rgba(black, 0.15);
+    margin-top: auto;
+    animation: fadeInUp 1s ease forwards;
+    .quote-container {
+      @include flex(row, nowrap, space-between, flex-start);
+      .quote-mark {
+        transition: color 1s;
+        font-size: 3rem;
+      }
+      .quote {
+        margin: 0 1rem;
+        color: rgb(83, 83, 83);
+        font-size: 1.5rem;
+      }
+    }
+    .quote-info {
+      margin-top: 0.6rem;
+      font-size: 0.9rem;
+      ul {
+        @include flex(row, nowrap, flex-end, center);
+        li {
+          margin-right: 0.33rem;
+          &:last-child {
+            margin-right: 0;
+          }
+          &.source {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+    .tags {
+      margin-top: 3rem;
+      ul {
+        @include flex(row, wrap, flex-start, center);
+        li {
+          padding: 0.5rem 1rem;
+          border-radius: 3px;
+          background: rgb(241, 241, 241);
+          margin-right: 0.25rem;
+          font-size: 0.7rem;
+          &:first-child {
+            background: transparent;
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+  button {
+    outline: none;
+    font-size: 0.9rem;
+    margin-left: auto;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    border: none;
+    background: white;
+    margin-top: 1rem;
+    box-shadow: 0 4px 4px rgba(black, 0.15);
+    transition: 0.2s;
+    cursor: pointer;
+    &:active {
+      box-shadow: none;
+      background: rgba(white, 0.75);
+    }
+  }
+}
